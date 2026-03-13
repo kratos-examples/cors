@@ -6,6 +6,7 @@ require (
 	github.com/brianvoe/gofakeit/v7 v7.14.1
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/google/wire v0.7.0
+	github.com/gorilla/handlers v1.5.2
 	github.com/yylego/done v0.0.0
 	github.com/yylego/kratos-ebz v0.0.0
 	github.com/yylego/must v0.0.0
@@ -21,6 +22,7 @@ require (
 require (
 	dario.cat/mergo v1.0.2 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
 	github.com/go-kratos/aegis v0.2.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
