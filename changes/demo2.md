@@ -5,10 +5,10 @@ Code differences compared to source project.
 ## internal/server/http.go (+33 -0)
 
 ```diff
-@@ -4,11 +4,38 @@
- 	"github.com/go-kratos/kratos/v2/log"
- 	"github.com/go-kratos/kratos/v2/middleware/recovery"
- 	"github.com/go-kratos/kratos/v2/transport/http"
+@@ -5,11 +5,38 @@
+ 
+ 	"github.com/go-kratos/kratos/v3/middleware/recovery"
+ 	"github.com/go-kratos/kratos/v3/transport/http"
 +	"github.com/gorilla/handlers"
  	pb "github.com/yylego/kratos-examples/demo2kratos/api/article"
  	"github.com/yylego/kratos-examples/demo2kratos/internal/conf"
@@ -41,10 +41,10 @@ Code differences compared to source project.
 +就基本证明是大功告成啦。
 +*/
 +
- func NewHTTPServer(c *conf.Server, article *service.ArticleService, logger log.Logger) *http.Server {
+ func NewHTTPServer(c *conf.Server, article *service.ArticleService, logger *slog.Logger) *http.Server {
  	var opts = []http.ServerOption{
  		http.Middleware(
-@@ -20,6 +47,12 @@
+@@ -21,6 +48,12 @@
  	}
  	if c.Http.Address != "" {
  		opts = append(opts, http.Address(c.Http.Address))
